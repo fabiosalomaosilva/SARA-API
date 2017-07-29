@@ -16,6 +16,8 @@ namespace Sara.Web.Api.Models
             // Adicione declarações de usuários aqui
             return userIdentity;
         }
+
+        public string NomeCompleto { get; set; }
     }
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
@@ -29,5 +31,11 @@ namespace Sara.Web.Api.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<Sara.Web.Model.Area> Areas { get; set; }
+
+        public System.Data.Entity.DbSet<Sara.Web.Model.Patologia> Patologias { get; set; }
+
+        public System.Data.Entity.DbSet<Sara.Web.Model.Acao> Acaos { get; set; }
     }
 }
