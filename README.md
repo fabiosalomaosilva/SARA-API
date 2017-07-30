@@ -1,7 +1,8 @@
 # saraapi
-Repositório da aplicação backend e administrativa do SARA
 
 Referências da mineração dos dados utilizados inicialmente na aplicação:
+
+-----------------------------
 
 Biazi, M.P; Magnoni, D; Cukier, C; Garita, FS; Waitzberg, DL; Pereira, JFCG; Galdina, AP; Lima, JS; Pavosqui,V;
 
