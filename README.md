@@ -1,4 +1,4 @@
-# saraapi
+# API e Área Administrativa do SARA
 
 Referências da mineração dos dados utilizados inicialmente na aplicação:
 
