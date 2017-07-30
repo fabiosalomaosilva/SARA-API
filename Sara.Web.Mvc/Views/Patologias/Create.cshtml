@@ -1,10 +1,10 @@
 ﻿@model Sara.Web.Model.Patologia
 
 @{
-    ViewBag.Title = "Create";
+    ViewBag.Title = "Cadastro de patologias";
 }
 
-<h2>Create</h2>
+<h2>Cadastrar nova patologia</h2>
 
 
 @using (Html.BeginForm()) 
@@ -12,9 +12,10 @@
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <h4>Patologia</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        
+        
         <div class="form-group">
             @Html.LabelFor(model => model.Nome, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
@@ -22,25 +23,26 @@
                 @Html.ValidationMessageFor(model => model.Nome, "", new { @class = "text-danger" })
             </div>
         </div>
-
+        
+        
         <div class="form-group">
-            @Html.LabelFor(model => model.IdArea, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.Descricao, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.IdArea, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.IdArea, "", new { @class = "text-danger" })
+                @Html.EditorFor(model => model.Descricao, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Descricao, "", new { @class = "text-danger" })
             </div>
         </div>
-
+        
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
+                <input type="submit" value="Salvar" class="btn btn-default" />
             </div>
         </div>
     </div>
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Voltar", "Index")
 </div>
 
 @section Scripts {

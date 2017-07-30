@@ -189,7 +189,9 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AcoesController.cs" />
     <Compile Include="Controllers\AreasController.cs" />
+    <Compile Include="Controllers\FaqsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\PatologiasController.cs" />
@@ -260,16 +262,26 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Areas\Create.cshtml" />
-    <Content Include="Views\Areas\Delete.cshtml" />
-    <Content Include="Views\Areas\Details.cshtml" />
-    <Content Include="Views\Areas\Edit.cshtml" />
-    <Content Include="Views\Areas\Index.cshtml" />
     <Content Include="Views\Patologias\Create.cshtml" />
     <Content Include="Views\Patologias\Delete.cshtml" />
     <Content Include="Views\Patologias\Details.cshtml" />
     <Content Include="Views\Patologias\Edit.cshtml" />
     <Content Include="Views\Patologias\Index.cshtml" />
+    <Content Include="Views\Areas\Create.cshtml" />
+    <Content Include="Views\Areas\Delete.cshtml" />
+    <Content Include="Views\Areas\Details.cshtml" />
+    <Content Include="Views\Areas\Edit.cshtml" />
+    <Content Include="Views\Areas\Index.cshtml" />
+    <Content Include="Views\Acoes\Create.cshtml" />
+    <Content Include="Views\Acoes\Delete.cshtml" />
+    <Content Include="Views\Acoes\Details.cshtml" />
+    <Content Include="Views\Acoes\Edit.cshtml" />
+    <Content Include="Views\Acoes\Index.cshtml" />
+    <Content Include="Views\Faqs\Create.cshtml" />
+    <Content Include="Views\Faqs\Delete.cshtml" />
+    <Content Include="Views\Faqs\Details.cshtml" />
+    <Content Include="Views\Faqs\Edit.cshtml" />
+    <Content Include="Views\Faqs\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

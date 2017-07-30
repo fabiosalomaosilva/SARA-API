@@ -1,0 +1,33 @@
+﻿@model Sara.Web.Model.Faq
+
+@{
+    ViewBag.Title = "Detalhes da questão";
+}
+
+<h2>Detalhes da questão</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Pergunta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pergunta)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Resposta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Resposta)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Voltar", "Index")
+</p>

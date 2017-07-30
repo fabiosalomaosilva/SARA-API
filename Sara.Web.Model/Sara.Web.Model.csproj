@@ -49,6 +49,7 @@
   <ItemGroup>
     <Compile Include="Acao.cs" />
     <Compile Include="Area.cs" />
+    <Compile Include="Faq.cs" />
     <Compile Include="Patologia.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -20,7 +20,8 @@ namespace Sara.Web.Mvc.Controllers
         // GET: Areas
         public async Task<ActionResult> Index()
         {
-            return View(await db.Areas.ToListAsync());
+            var lista = db.Areas.Include(p => p.Patologia);
+            return View(await lista.ToListAsync());
         }
 
         // GET: Areas/Details/5
@@ -41,6 +42,7 @@ namespace Sara.Web.Mvc.Controllers
         // GET: Areas/Create
         public ActionResult Create()
         {
+            ViewBag.PatologiaID = new SelectList(db.Patologias, "Id", "Nome");
             return View();
         }
 
@@ -49,7 +51,7 @@ namespace Sara.Web.Mvc.Controllers
         // obter mais detalhes, consulte https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Create([Bind(Include = "Id,Nome")] Area area)
+        public async Task<ActionResult> Create([Bind(Include = "Id,Nome,PatologiaID")] Area area)
         {
             if (ModelState.IsValid)
             {
@@ -68,6 +70,7 @@ namespace Sara.Web.Mvc.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
+            ViewBag.PatologiaID = new SelectList(db.Patologias, "Id", "Nome");
             Area area = await db.Areas.FindAsync(id);
             if (area == null)
             {
@@ -81,7 +84,7 @@ namespace Sara.Web.Mvc.Controllers
         // obter mais detalhes, consulte https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Edit([Bind(Include = "Id,Nome")] Area area)
+        public async Task<ActionResult> Edit([Bind(Include = "Id,Nome,PatologiaID")] Area area)
         {
             if (ModelState.IsValid)
             {

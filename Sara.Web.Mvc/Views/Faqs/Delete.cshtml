@@ -1,0 +1,39 @@
+﻿@model Sara.Web.Model.Faq
+
+@{
+    ViewBag.Title = "Excluir uma questão";
+}
+
+<h2>Excluir uma questão</h2>
+
+<h3>Deseja excluir o registro?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Pergunta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pergunta)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Resposta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Resposta)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Excluir" class="btn btn-default" /> |
+            @Html.ActionLink("Voltar", "Index")
+        </div>
+    }
+</div>

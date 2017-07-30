@@ -229,9 +229,9 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AcoesController.cs" />
     <Compile Include="Controllers\AreasController.cs" />
+    <Compile Include="Controllers\FaqsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PatologiasController.cs" />
-    <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -242,6 +242,34 @@
     <Compile Include="Migrations\201707291945159_Mig02.cs" />
     <Compile Include="Migrations\201707291945159_Mig02.Designer.cs">
       <DependentUpon>201707291945159_Mig02.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201707292026057_Mig03.cs" />
+    <Compile Include="Migrations\201707292026057_Mig03.Designer.cs">
+      <DependentUpon>201707292026057_Mig03.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201707292245581_Mig04.cs" />
+    <Compile Include="Migrations\201707292245581_Mig04.Designer.cs">
+      <DependentUpon>201707292245581_Mig04.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201707300035545_Mig05.cs" />
+    <Compile Include="Migrations\201707300035545_Mig05.Designer.cs">
+      <DependentUpon>201707300035545_Mig05.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201707300120463_Mig06.cs" />
+    <Compile Include="Migrations\201707300120463_Mig06.Designer.cs">
+      <DependentUpon>201707300120463_Mig06.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201707300154230_Mig07.cs" />
+    <Compile Include="Migrations\201707300154230_Mig07.Designer.cs">
+      <DependentUpon>201707300154230_Mig07.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201707300333335_Mig08.cs" />
+    <Compile Include="Migrations\201707300333335_Mig08.Designer.cs">
+      <DependentUpon>201707300333335_Mig08.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201707300356053_Mig09.cs" />
+    <Compile Include="Migrations\201707300356053_Mig09.Designer.cs">
+      <DependentUpon>201707300356053_Mig09.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
@@ -340,6 +368,27 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201707291945159_Mig02.resx">
       <DependentUpon>201707291945159_Mig02.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201707292026057_Mig03.resx">
+      <DependentUpon>201707292026057_Mig03.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201707292245581_Mig04.resx">
+      <DependentUpon>201707292245581_Mig04.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201707300035545_Mig05.resx">
+      <DependentUpon>201707300035545_Mig05.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201707300120463_Mig06.resx">
+      <DependentUpon>201707300120463_Mig06.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201707300154230_Mig07.resx">
+      <DependentUpon>201707300154230_Mig07.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201707300333335_Mig08.resx">
+      <DependentUpon>201707300333335_Mig08.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201707300356053_Mig09.resx">
+      <DependentUpon>201707300356053_Mig09.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

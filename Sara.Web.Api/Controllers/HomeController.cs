@@ -10,7 +10,7 @@ namespace Sara.Web.Api.Controllers
     {
         public ActionResult Index()
         {
-            ViewBag.Title = "Home Page";
+            ViewBag.Title = "Inicial";
 
             return View();
         }

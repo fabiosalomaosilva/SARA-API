@@ -1,21 +1,17 @@
 ﻿@model IEnumerable<Sara.Web.Model.Patologia>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Cadastro de patologias";
 }
-
-<h2>Index</h2>
+<h2>Cadastro de patologias</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Criar novo", "Create")
 </p>
 <table class="table">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.Nome)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.IdArea)
         </th>
         <th></th>
     </tr>
@@ -25,13 +21,11 @@
         <td>
             @Html.DisplayFor(modelItem => item.Nome)
         </td>
+
         <td>
-            @Html.DisplayFor(modelItem => item.IdArea)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+            @Html.ActionLink("Editar", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Detalhes", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Excluir", "Delete", new { id=item.Id })
         </td>
     </tr>
 }

@@ -38,6 +38,8 @@ namespace Sara.Web.Mvc.Models
         public DbSet<Area> Areas { get; set; }
         public DbSet<Patologia> Patologias { get; set; }
         public DbSet<Acao> Acoes { get; set; }
+
+        public System.Data.Entity.DbSet<Sara.Web.Model.Faq> Faqs { get; set; }
     }
 
     public static class IdentityExtensions

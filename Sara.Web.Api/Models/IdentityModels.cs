@@ -1,8 +1,10 @@
-﻿using System.Security.Claims;
+﻿using System.Data.Entity;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
+using Sara.Web.Model;
 
 namespace Sara.Web.Api.Models
 {
@@ -32,10 +34,12 @@ namespace Sara.Web.Api.Models
             return new ApplicationDbContext();
         }
 
-        public System.Data.Entity.DbSet<Sara.Web.Model.Area> Areas { get; set; }
+        public DbSet<Area> Areas { get; set; }
 
-        public System.Data.Entity.DbSet<Sara.Web.Model.Patologia> Patologias { get; set; }
+        public DbSet<Patologia> Patologias { get; set; }
 
-        public System.Data.Entity.DbSet<Sara.Web.Model.Acao> Acaos { get; set; }
+        public DbSet<Acao> Acaos { get; set; }
+
+        public DbSet<Faq> Faqs { get; set; }
     }
 }

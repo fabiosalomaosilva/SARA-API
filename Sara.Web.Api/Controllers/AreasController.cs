@@ -19,9 +19,9 @@ namespace Sara.Web.Api.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: api/Areas
-        public IQueryable<Area> GetAreas()
+        public IEnumerable<Area> GetAreas()
         {
-            return db.Areas;
+            return db.Areas.ToList();
         }
 
         // GET: api/Areas/5
@@ -37,84 +37,5 @@ namespace Sara.Web.Api.Controllers
             return Ok(area);
         }
 
-        // PUT: api/Areas/5
-        [ResponseType(typeof(void))]
-        public async Task<IHttpActionResult> PutArea(int id, Area area)
-        {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
-
-            if (id != area.Id)
-            {
-                return BadRequest();
-            }
-
-            db.Entry(area).State = EntityState.Modified;
-
-            try
-            {
-                await db.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!AreaExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-
-            return StatusCode(HttpStatusCode.NoContent);
-        }
-
-        // POST: api/Areas
-        [ResponseType(typeof(Area))]
-        public async Task<IHttpActionResult> PostArea(Area area)
-        {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
-
-            db.Areas.Add(area);
-            await db.SaveChangesAsync();
-
-            return CreatedAtRoute("DefaultApi", new { id = area.Id }, area);
-        }
-
-        // DELETE: api/Areas/5
-        [ResponseType(typeof(Area))]
-        public async Task<IHttpActionResult> DeleteArea(int id)
-        {
-            Area area = await db.Areas.FindAsync(id);
-            if (area == null)
-            {
-                return NotFound();
-            }
-
-            db.Areas.Remove(area);
-            await db.SaveChangesAsync();
-
-            return Ok(area);
-        }
-
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing)
-            {
-                db.Dispose();
-            }
-            base.Dispose(disposing);
-        }
-
-        private bool AreaExists(int id)
-        {
-            return db.Areas.Count(e => e.Id == id) > 0;
-        }
     }
 }

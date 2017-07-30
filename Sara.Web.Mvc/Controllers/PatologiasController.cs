@@ -49,7 +49,7 @@ namespace Sara.Web.Mvc.Controllers
         // obter mais detalhes, consulte https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Create([Bind(Include = "Id,Nome,IdArea")] Patologia patologia)
+        public async Task<ActionResult> Create([Bind(Include = "Id,Nome,IdArea,Descricao")] Patologia patologia)
         {
             if (ModelState.IsValid)
             {
@@ -81,7 +81,7 @@ namespace Sara.Web.Mvc.Controllers
         // obter mais detalhes, consulte https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Edit([Bind(Include = "Id,Nome,IdArea")] Patologia patologia)
+        public async Task<ActionResult> Edit([Bind(Include = "Id,Nome,IdArea,Descricao")] Patologia patologia)
         {
             if (ModelState.IsValid)
             {

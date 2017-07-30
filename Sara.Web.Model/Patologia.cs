@@ -7,16 +7,27 @@ namespace Sara.Web.Model
     {
         public Patologia()
         {
+            Areas = new HashSet<Area>();
             Acoes = new HashSet<Acao>();
         }
         [Key]
         public int Id { get; set; }
 
+        [Required]
+        [Display(Name = "Nome da patologia")]
+        [MaxLength(50)]
+        [MinLength(5)]
         public string Nome { get; set; }
 
-        public int IdArea { get; set; }
-        public virtual Area Area { get; set; }
+        [Required]
+        [Display(Name = "Descrição")]
+        [MaxLength(400)]
+        [MinLength(15)]
+        [DataType(DataType.MultilineText)]
+        public string Descricao { get; set; }
 
-        public virtual ICollection<Acao> Acoes { get; set; }
+
+        public ICollection<Area> Areas { get; set; }
+        public ICollection<Acao> Acoes { get; set; }
     }
 }

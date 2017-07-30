@@ -1,14 +1,13 @@
 ﻿@model Sara.Web.Model.Patologia
 
 @{
-    ViewBag.Title = "Delete";
+    ViewBag.Title = "Excluir patologia";
 }
 
-<h2>Delete</h2>
+<h2>Excluir patologia</h2>
 
-<h3>Are you sure you want to delete this?</h3>
+<h3>Deseja excluir o registro?</h3>
 <div>
-    <h4>Patologia</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -19,22 +18,14 @@
             @Html.DisplayFor(model => model.Nome)
         </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.IdArea)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.IdArea)
-        </dd>
-
     </dl>
 
     @using (Html.BeginForm()) {
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
+            <input type="submit" value="Excluir" class="btn btn-default" /> |
+            @Html.ActionLink("Voltar", "Index")
         </div>
     }
 </div>

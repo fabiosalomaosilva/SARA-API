@@ -19,9 +19,9 @@ namespace Sara.Web.Api.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: api/Acoes
-        public IQueryable<Acao> GetAcaos()
+        public IEnumerable<Acao> GetAcaos()
         {
-            return db.Acaos;
+            return db.Acaos.ToList();
         }
 
         // GET: api/Acoes/5
@@ -37,84 +37,6 @@ namespace Sara.Web.Api.Controllers
             return Ok(acao);
         }
 
-        // PUT: api/Acoes/5
-        [ResponseType(typeof(void))]
-        public async Task<IHttpActionResult> PutAcao(int id, Acao acao)
-        {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
 
-            if (id != acao.Id)
-            {
-                return BadRequest();
-            }
-
-            db.Entry(acao).State = EntityState.Modified;
-
-            try
-            {
-                await db.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!AcaoExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-
-            return StatusCode(HttpStatusCode.NoContent);
-        }
-
-        // POST: api/Acoes
-        [ResponseType(typeof(Acao))]
-        public async Task<IHttpActionResult> PostAcao(Acao acao)
-        {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
-
-            db.Acaos.Add(acao);
-            await db.SaveChangesAsync();
-
-            return CreatedAtRoute("DefaultApi", new { id = acao.Id }, acao);
-        }
-
-        // DELETE: api/Acoes/5
-        [ResponseType(typeof(Acao))]
-        public async Task<IHttpActionResult> DeleteAcao(int id)
-        {
-            Acao acao = await db.Acaos.FindAsync(id);
-            if (acao == null)
-            {
-                return NotFound();
-            }
-
-            db.Acaos.Remove(acao);
-            await db.SaveChangesAsync();
-
-            return Ok(acao);
-        }
-
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing)
-            {
-                db.Dispose();
-            }
-            base.Dispose(disposing);
-        }
-
-        private bool AcaoExists(int id)
-        {
-            return db.Acaos.Count(e => e.Id == id) > 0;
-        }
     }
 }
