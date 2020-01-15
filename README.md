@@ -1,6 +1,8 @@
 # API e Área Administrativa do SARA
 
-Referências da mineração dos dados utilizados inicialmente na aplicação:
+Aplicação de backend do App SARA, desenvolvido no Hackathon SEBRAE 2017.
+
+# Referências da mineração dos dados utilizados inicialmente na aplicação:
 
 -----------------------------
 
@@ -15,8 +17,6 @@ http://www.scielo.br/scielo.php?script=sci_arttext&pid=S0103-51502016000200335&l
 http://www2.camara.leg.br/atividade-legislativa/comissoes/comissoes-permanentes/cpd/documentos/apresentacao-maria-inez-e-thereza-de-lamare
 
 http://portalarquivos.saude.gov.br/images/PROTOCOLO%20DE%20ATENDIMENTO%20PARA%20MICROCEFALIA.pdf
-
-file:///C:/Users/DELL/Desktop/TCC/TCC.png
 
 http://189.28.128.100/dab/docs/publicacoes/cadernos_ab/caderno_33.pdf
 
